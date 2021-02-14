@@ -39,6 +39,7 @@ span,p,li,a,label,button,::placeholder{
   background-color:#f6f6f6;
   width:100%;
 }
+
 .form-label,
 .form-edit,
 .form-group,
@@ -80,6 +81,11 @@ span,p,li,a,label,button,::placeholder{
 
 .button:active{
   transform:scale(1.05);
+}
+
+#output{
+  max-width:800px;
+  margin: 0 auto;
 }
 
 .article{
