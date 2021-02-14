@@ -10,7 +10,7 @@ function NavBar() {
     ))
     return (
         <>
-            <Navbar id="nav" className="d-flex justify-coontent-between">
+            <Navbar id="nav" className="d-flex justify-content-between">
                 <Navbar.Brand href="#home">Article Generator</Navbar.Brand>
                 <Nav className="nav-elements">
                 {displayNav}

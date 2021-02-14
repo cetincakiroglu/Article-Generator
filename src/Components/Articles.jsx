@@ -2,7 +2,7 @@ import React from 'react'
 import {Row} from 'react-bootstrap'
 import ArticleCard from './ArticleCard'
 
-function Articles({saveEdit,formInput,matchedArticle}) {
+function Articles({ saveEdit, formInput , matchedArticle}) {
     return (
         <>
             <Row>
