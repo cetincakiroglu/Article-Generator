@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+*{
+  background-color:#242424;
+  color:#f6f6f6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Ubuntu', sans-serif !important;
+  font-weight:400;
+  background-color:none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+span,p,li,a,label,button,::placeholder{
+  font-family: 'Roboto', sans-serif;
+  font-size:18px;
+  font-weight:300;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#nav,#footer{
+  background-color:rgba(255, 255, 255, 0.068);
+ 
+}
+.nav-elements{
+  background-color:transparent;
+}
+.nav-elements, a{
+  color:#f6f6f6 !important;
+  
 }
 
-.App-link {
-  color: #61dafb;
+#form{
+  margin:20% auto !important;
+  height:200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-edit{
+  background-color:#f6f6f6;
+  width:100%;
+}
+.form-label,
+.form-edit,
+.form-group,
+.form-control{
+  background-color:transparent;
+}
+.form-edit>.form-label{
+  background-color:#f6f6f6;
+  width:100%;
+}
+.input-field{
+  height:100%;
+  width:500px;
+}
+.input-field:focus{
+  border-color:#242424 !important;
+}
+
+.form-control:focus{
+  box-shadow:none !important;
+}
+.button{
+  border-radius:35px;
+  padding:10px 100px;
+  transition: .1s ease-in;
+  outline:none;
+  border:none;
+  
+}
+.submit-btn{
+  border:1px solid #86FFCC;
+  color:#f6f6f6;
+}
+
+.submit-btn:hover{
+  background-color: #86ffcc;
+  color:#242424;
+}
+
+.button:active{
+  transform:scale(1.05);
+}
+
+.article{
+  color:#242424;
+  background-color:#f6f6f6;
+  border-radius:10px;
+}
+.article-group>p{
+  background-color:#f6f6f6 !important;
+  color:#242424;
+}
+.article-group{
+  background-color:#f6f6f6 !important;
 }
