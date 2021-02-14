@@ -7,6 +7,7 @@
 - React Bootstrap
 - Node.js
 - Google Custom Search API
+- DeepAI Text Generation API
 - Heroku
 
 ### Task List
@@ -37,24 +38,26 @@
     2. [x] Add class toggler to buttons. Article Card should be hidden when user is editing.
     3. [x] Implement a save button, it should hide text area and show article card on click.
     4. [x] Update article card with edited article.
-    5. [] Initialize the local storage and save updated article.
+    5. [ ] Initialize the local storage and save updated article.
     
 
 ### Stage IV // Real data
-- [] Perform a search on Google by keywords with Google Custom Search API.
-    1. [] Get articles from Google search results.
-    2. [] Send articles in an array by state to child components.
-    3. [] Generate articles.
-- [] User testing.
+- [ ] Perform a search on Google by keywords with Google Custom Search API.
+    1. [ ] Get articles from Google search results.
+    2. [ ] Send articles in an array by state to child components.
+    3. [ ] Generate articles.
+- [ ] Implement DeepAI Text Generation API.
+- [ ] Implement spell checker API. /optional/
+- [ ] User testing.
 ### Stage V // Revision
-- [] Code static components.
-    1. [] How it works?
-    2. [] About us
-    3. [] Contact
-- [] Implement react router dom.
-- [] Refactor components, improve code quality.
-- [] Improve styling, make it more responsive.
-- [] Check cross-browser compatibility
-- [] Deploy.
+- [ ] Code static components.
+    1. [ ] How it works?
+    2. [ ] About us
+    3. [ ] Contact
+- [ ] Implement react router dom.
+- [ ] Refactor components, improve code quality.
+- [ ] Improve styling, make it more responsive.
+- [ ] Check cross-browser compatibility
+- [ ] Deploy.
 ---
 
