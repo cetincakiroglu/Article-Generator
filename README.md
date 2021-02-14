@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Project: X 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- X is an article generator aims to bring relevant articles by keyword input from the user.
 
-## Available Scripts
+### Technologies Used
+- React.js
+- React Bootstrap
+- Node.js
+- Google Custom Search API
+- Heroku
 
-In the project directory, you can run:
+### Task List
 
-### `yarn start`
+### Stage I // Design UI
+- [x] Design project components in Figma.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Stage II // Preparing the environment
+- [x] Create React environment in local.
+- [x] Install React Router & React Bootstrap.
+- [x] Create component files and folders according to the design file.
+- [x] Code basic outlines of project.
+    1. [x] Landing page.
+    2. [x] Article component.
+    3. [x] Article card component.
+    4. [x] How it works page.
+    5. [x] Contact page.
+    6. [x] About us page. 
+    
+### Stage III // Fake data
+- [x] Implement input field, user should be able to enter keywords.
+- [x] Search the dummy data by keywords.
+- [x] Find matching articles from the array of dummy articles.
+- [x] Store matching article in an array by state and send it to Article Card component.
+- [x] Map the article array and generate Article Card.
+- [x] Implement a button to edit article.
+    1. [x] Make a component to send article into a text area.
+    2. [x] Add class toggler to buttons. Article Card should be hidden when user is editing.
+    3. [x] Implement a save button, it should hide text area and show article card on click.
+    4. [x] Update article card with edited article.
+    5. [] Initialize the local storage and save updated article.
+    
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Stage IV // Real data
+- [] Perform a search on Google by keywords with Google Custom Search API.
+    1. [] Get articles from Google search results.
+    2. [] Send articles in an array by state to child components.
+    3. [] Generate articles.
+- [] User testing.
+### Stage V // Revision
+- [] Code static components.
+    1. [] How it works?
+    2. [] About us
+    3. [] Contact
+- [] Implement react router dom.
+- [] Refactor components, improve code quality.
+- [] Improve styling, make it more responsive.
+- [] Check cross-browser compatibility
+- [] Deploy.
+---
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
