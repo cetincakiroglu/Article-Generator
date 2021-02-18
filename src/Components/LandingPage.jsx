@@ -4,8 +4,6 @@ import Articles from './Articles'
 
 
 function LandingPage() {
-
-  const [formInput,setFormInput] = useState([]);
   
  //dummy data
  const dummyArticle = [
@@ -14,37 +12,59 @@ function LandingPage() {
   "Meditation can give you a sense of calm, peace and balance that can benefit both your emotional well-being and your overall health. And these benefits don't end when your meditation session ends. Meditation can help carry you more calmly through your day and may help you manage symptoms of certain medical conditions."
 ];
 
-  const userInput = useRef();
+const [formInput,setFormInput] = useState([]);
 
-  const handleSubmit = (e) =>{
-    e.preventDefault();
-    const keyword = userInput.current.value;
-    console.log('keyword',keyword);
+const [matchedArticle, setMatchedArticle] = useState([]);
+const [id, setid] = useState(-1);
+const userInput = useRef();
 
-    setFormInput([...formInput, keyword])
-    searchArticles(keyword);
-    }
+const handleSubmit = (e) =>{
+  e.preventDefault();
 
-    const [matchedArticle, setMatchedArticle] = useState([]);
+  const keyword = userInput.current.value;
+  console.log('keyword',keyword);
 
-    const searchArticles = (str) =>{
-      //TODO: Revise that function
+  setFormInput([...formInput, keyword])
+  searchArticles(keyword);
+  }
+
+const searchArticles = (str) =>{
+  if(str == false){
+    alert('please enter a valid keyword')
+  }else{
       let newArticle = dummyArticle.map(item => item)
         .filter(item => item
         .includes(str.split(' ')[0].toLowerCase() || str.split(' ')[1].toLowerCase()));
-      //TODO: Revise that function
-     console.log(newArticle)
-      // newArticle = newArticle[0].paragraph;
-      setMatchedArticle([newArticle]);
-      console.log(matchedArticle);
-    }
 
-    const saveEdit = (obj) =>{
-      const editedArticle = obj.article;
-      
-      setMatchedArticle([editedArticle]);
-      console.log('edited version',matchedArticle);
+      setMatchedArticle([...matchedArticle, newArticle]);
     }
+    //[...matchedArticle,newArticle] --> gives multiple articles, you need to fix edit by using article id's;
+    //setMatchedArticle(newArticle) --->gives single result
+  }
+  
+  const saveEdit = (obj) =>{
+    const text = obj.article;
+    // setMatchedArticle([editedArticle]);
+    let article = [...matchedArticle];
+    article[id] = [text]
+    setMatchedArticle(article);
+    setid(-1);
+    
+    sessionStorage.setItem('article', JSON.stringify(article));
+    console.log(typeof article)
+    
+  }
+  const getStoredArticle = () =>{
+    let storedArticle = JSON.parse(sessionStorage.getItem('article'));
+    if(storedArticle !== [[]] && storedArticle !== null) setMatchedArticle([...storedArticle]);
+
+    console.log('local storage',storedArticle);
+  }
+  //refactor this
+  window.addEventListener('load',()=>{
+    getStoredArticle();
+  })
+  //refactor this
 
     return (
       <>
@@ -66,6 +86,7 @@ function LandingPage() {
         matchedArticle = {matchedArticle}
         setMatchedArticle = {setMatchedArticle}
         saveEdit = {saveEdit}
+        setid = {setid}
         />
       </>
     )

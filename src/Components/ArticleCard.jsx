@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Row, Col, Form } from 'react-bootstrap'
 
-function ArticleCard({ saveEdit, matchedArticle }) {
+function ArticleCard({matchedArticle, saveEdit, setid}) {
 
     const [classToggler, setClassToggler] = useState(true);
 
@@ -12,31 +12,30 @@ function ArticleCard({ saveEdit, matchedArticle }) {
         handleDisplay();
     }
 
-    const [id, setid] = useState(-1);
-    
     const editArticle = (obj) => {
         setid(obj.id);
-        textArea.current.value = obj.value;
+        textArea.current.value = obj.article;
         handleDisplay();
     }
+
     const handleDisplay = () => {
         classToggler === true ? setClassToggler(false) : setClassToggler(true);
-
+//d-none d-block
     }
-    const showArticle = matchedArticle.map((text, index) => {
+    const showArticle = matchedArticle.map((item, index) => {
         return (
             <Col className='article col-md-10 offset-md-1 d-flex flex-column align-items-center mb-5'>
                 <Col className={`article d-${classToggler === true ? 'block' : 'none'} my-4 px-5`}>
                     <div className="article-group text-left">
                         <p>
-                            {text}
+                            {item}
                         </p>
                     </div>
                     <div className="article-group mt-4 d-flex justify-content-center">
                         <button
                             onClick={() => editArticle({
                                 id: index,
-                                value: text
+                                article: item
                             })}
 
                             className="button">
@@ -47,7 +46,6 @@ function ArticleCard({ saveEdit, matchedArticle }) {
 
                 {/* editing part starts */}
                 <Col className="article my-4 px-5">
-
                     <Form className={`form-edit d-${classToggler === true ? 'none' : 'block'}`} onSubmit={handleSubmit}>
                         <Form.Group controlId="exampleForm.ControlTextarea1">
                             <Form.Label
@@ -70,12 +68,9 @@ function ArticleCard({ saveEdit, matchedArticle }) {
                         </Form.Group>
                     </Form>
                 </Col>
-
-
             </Col>
         )
     })
-
     return (
         <>
             {showArticle}
