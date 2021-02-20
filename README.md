@@ -38,13 +38,13 @@
     2. [x] Add class toggler to buttons. Article Card should be hidden when user is editing.
     3. [x] Implement a save button, it should hide text area and show article card on click.
     4. [x] Update article card with edited article.
-    5. [ ] Initialize the local storage and save updated article.
+    5. [x] Initialize the local storage and save updated article.
     
 
 ### Stage IV // Real data
-- [ ] Perform a search on Google by keywords with Google Custom Search API.
-    1. [ ] Get articles from Google search results.
-    2. [ ] Send articles in an array by state to child components.
+- [x] Perform a search on Google by keywords with Google Custom Search API.
+    1. [x] Get articles from Google search results.
+    2. [x] Send articles in an array by state to child components.
     3. [ ] Generate articles.
 - [ ] Implement DeepAI Text Generation API.
 - [ ] Implement spell checker API. /optional/
