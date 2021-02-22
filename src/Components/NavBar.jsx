@@ -2,10 +2,13 @@ import React from 'react'
 import {Nav, Navbar} from 'react-bootstrap'
 import {Link} from 'react-router-dom';
 
-function NavBar() {
-    const NavElems = ['How It Works?', 'About Us', 'Contact'];
-    const displayNav = NavElems.map((item) => (
-        <Nav.Link>{item}</Nav.Link>
+function NavBar(props) {
+   
+    const displayNav = props.links.filter((item)=> item.isLink)
+    .map((item,index) => (
+        <Nav.Link key={index}>
+          <Link to={item.link}>{item.title}</Link>
+        </Nav.Link>
 
     ))
     return (
