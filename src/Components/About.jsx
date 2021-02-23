@@ -8,7 +8,7 @@ function About() {
             <Col>
             <div className="container">
                 <h2 id="about-header">About</h2>
-                Creation Text has emerged as a result of this adventure set out with Kodluyoruz by 3 developers.
+                Article Generator has emerged as a result of this adventure set out with 3 developers from Kodluyoruz 78.Adana Full Stack Web Development Bootcamp.
                 <br /><br />
                 In this period when our time was our biggest competitor,
                 we aimed to create an automatic text under the guidance of the requested information,

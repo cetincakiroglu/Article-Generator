@@ -6,41 +6,29 @@ import {FaGithub,FaLinkedin} from "react-icons/fa";
 function Footer(){
     return (
         <>
-            <div className="footer ">
-                <div className="container">
-                    <Row>
-
-                        <Col className="mt-3">
-                            <ListGroup variant="flush" className="   footer-categories ">
-                        <ListGroup.Item className="f-option"><h3>Category</h3></ListGroup.Item>
-                        <ListGroup.Item className="f-option">-Home</ListGroup.Item>
-                        <ListGroup.Item className="f-option">-About</ListGroup.Item>
-                        <ListGroup.Item className="f-option">-Contact</ListGroup.Item>
-                    </ListGroup>
-
-                    </Col>
-
-                        <Col className="our-information">
-
-                            <p>Mustafa Koşmaz</p>
-                            <Card.Link href="https://www.linkedin.com/in/neverrun/"><FaLinkedin/></Card.Link>
-                            <Card.Link href="https://github.com/01mk027"><FaGithub/></Card.Link>
+           
+                <div className="container-fluid">
+                    <Row className="mt-5 pt-3 pb-3 d-flex" id="footer">
+            
+                        <Col className="our-information text-center">
+                            <h6 className="green">Mustafa Koşmaz</h6>
+                            <Card.Link href="https://www.linkedin.com/in/neverrun/"><FaLinkedin className="icons"/></Card.Link>
+                            <Card.Link href="https://github.com/01mk027"><FaGithub className="icons"/></Card.Link>
                         </Col>
-                    <Col className="our-information">
-                            <p>Çetin Çakıroğlu</p>
-                        <Card.Link href="https://www.linkedin.com/in/cakiroglu-cetin/"><FaLinkedin/></Card.Link>
-                        <Card.Link href="https://github.com/cetincakiroglu"><FaGithub/></Card.Link>
-                    </Col>
-                    <Col className="our-information">
-                            <p>Saliha Şahin</p>
-                        <Card.Link href="https://www.linkedin.com/in/saliha-%C5%9Fahin-45651a19a/"><FaLinkedin/></Card.Link>
-                        <Card.Link href="https://github.com/SalihaSahin"><FaGithub/></Card.Link>
-
-                    </Col>
+                        <Col className="our-information text-center">
+                            <h6 className="green">Çetin Çakıroğlu</h6>
+                        <Card.Link href="https://www.linkedin.com/in/cakiroglu-cetin/"><FaLinkedin className="icons"/></Card.Link>
+                        <Card.Link href="https://github.com/cetincakiroglu"><FaGithub className="icons"/></Card.Link>
+                        </Col>
+                        <Col className="our-information text-center">
+                            <h6 className="green">Saliha Şahin</h6>
+                        <Card.Link href="https://www.linkedin.com/in/saliha-%C5%9Fahin-45651a19a/"><FaLinkedin className="icons"/></Card.Link>
+                        <Card.Link href="https://github.com/SalihaSahin"><FaGithub className="icons"/></Card.Link>
+                        </Col>
                     </Row>
 
                 </div>
-            </div>
+         
 
         </>
     );

@@ -3,7 +3,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import {Container, Row, Col} from 'react-bootstrap'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import {ArticleContext} from './Components/context/ArticleContext'
 
 import NavBar from './Components/NavBar'
 import Footer from './Components/Footer'
@@ -28,10 +27,10 @@ function App() {
     <NavBar 
     links={links}
     />
-    <Container>
+    <Container id="main-wrapper">
       {routeMaps}
     </Container>
-    <Footer className="asd"/>
+    <Footer/>
     </BrowserRouter>
 
     </>

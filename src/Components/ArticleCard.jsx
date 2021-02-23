@@ -14,7 +14,6 @@ function ArticleCard({saveEdit, setid,values}) {
     }
 
     const editArticle = (obj) => {
-       
         textArea.current.value = obj.article;
         handleDisplay();
     }
@@ -25,7 +24,7 @@ function ArticleCard({saveEdit, setid,values}) {
     }
     
     let showArticle;
-   if(values){
+   if(values[0]){
        showArticle = Array(values.join(' ')).map((item, index) => {
             return (
                 <Col className='article col-md-10 offset-md-1 d-flex flex-column align-items-center mb-5'>
@@ -64,6 +63,7 @@ function ArticleCard({saveEdit, setid,values}) {
                             <Form.Group className="text-center">
                                 <button
                                     onClick={() => saveEdit({
+                                        id: index,
                                         article: textArea.current.value
                                     })}
                                     className="button mt-4">
@@ -75,8 +75,6 @@ function ArticleCard({saveEdit, setid,values}) {
                 </Col>
             )
         })
-   }else{
-       return '';
    }
     return (
         <>

@@ -6,8 +6,8 @@ function NavBar(props) {
    
     const displayNav = props.links.filter((item)=> item.isLink)
     .map((item,index) => (
-        <Nav.Link key={index}>
-          <Link to={item.link}>{item.title}</Link>
+        <Nav.Link  key={index}>
+          <Link className="green" to={item.link}>{item.title}</Link>
         </Nav.Link>
 
     ))
@@ -17,7 +17,6 @@ function NavBar(props) {
                 <Navbar.Brand href="#home">Article Generator</Navbar.Brand>
                 <Nav className="nav-elements">
                 {displayNav}
-                <div id="google_translate_element"></div>
                 </Nav>
             </Navbar>
         </>

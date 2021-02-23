@@ -1,4 +1,4 @@
-import React,{useState, useRef, useEffect, useContext } from 'react'
+import React,{useState, useRef, useEffect} from 'react'
 import {Row, Col, Form} from 'react-bootstrap';
 import Articles from './Articles'
 import dummyData from '../Data/dummyData';
@@ -15,8 +15,7 @@ const userInput = useRef();
 
 const handleSubmit = (e) =>{
   e.preventDefault();
-
-  const keyword = userInput.current.value;
+    const keyword = userInput.current.value;
   console.log('keyword',keyword);
 
   setFormInput([...formInput, keyword])
@@ -33,31 +32,8 @@ const searchArticles = (str) =>{
 
       setMatchedArticle([...matchedArticle,newArticle]);
     }
-    //[...matchedArticle,newArticle] --> gives multiple articles, you need to fix edit by using article id's;
-    //setMatchedArticle(newArticle) --->gives single result
   }
   
-  const saveEdit = (obj) =>{
-    const text = obj.article;
-    // setMatchedArticle([editedArticle]);
-    let article = [...matchedArticle];
-    article[id] = [text]
-    setMatchedArticle(article);
-    setid(-1);
-    
-  //   sessionStorage.setItem('article', JSON.stringify(article));
-  // console.log(typeof article)
-    
-  }
-  // const getStoredArticle = () =>{
-  //   let storedArticle = JSON.parse(sessionStorage.getItem('article'));
-  //   if(storedArticle !== [[]] && storedArticle !== null) setMatchedArticle([...storedArticle]);
-  // }
- 
-  // useEffect (()=>{
-  //   getStoredArticle();
-  // },[])
-
     return (
       <>
         <Col>
@@ -67,7 +43,7 @@ const searchArticles = (str) =>{
               <Form.Control
                type="text"
                ref={userInput} 
-               placeholder="'Meditation and it's benefits'" 
+               placeholder="Please Enter Keyword" 
                className="rounded-pill" />
             </Form.Group>
              <button className="button submit-btn">
@@ -79,7 +55,6 @@ const searchArticles = (str) =>{
         formInput = {formInput}
         matchedArticle = {matchedArticle}
         setMatchedArticle = {setMatchedArticle}
-        saveEdit = {saveEdit}
         setid = {setid}
         />
       </>

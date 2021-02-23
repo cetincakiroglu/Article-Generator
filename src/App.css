@@ -19,7 +19,7 @@ span,p,li,a,label,button,::placeholder{
 }
 
 #nav,#footer{
-  background-color:rgba(255, 255, 255, 0.068);
+  background-color:rgba(255, 255, 255, 0.068) !important;
  
 }
 .nav-elements{
@@ -29,7 +29,12 @@ span,p,li,a,label,button,::placeholder{
   color:#f6f6f6 !important;
   
 }
-
+.green{
+  color: #81c55f;
+}
+.border-green{
+  border:2px solid #81c55f;
+}
 #form{
   margin:20% auto !important;
   height:200px;
@@ -62,20 +67,22 @@ span,p,li,a,label,button,::placeholder{
   box-shadow:none !important;
 }
 .button{
-  border-radius:35px;
-  padding:10px 100px;
+  border-radius:45px;
+  padding:10px 50px;
   transition: .1s ease-in;
   outline:none;
   border:none;
   
 }
 .submit-btn{
-  border:1px solid #86FFCC;
-  color:#f6f6f6;
+  border:1px solid #81c55f;
+  background-color:#242424;
+  color:#81c55f;
+  font-weight:500;  
 }
 
 .submit-btn:hover{
-  background-color: #86ffcc;
+  background-color: #81c55f;
   color:#242424;
 }
 
@@ -99,6 +106,16 @@ span,p,li,a,label,button,::placeholder{
 }
 .article-group{
   background-color:#f6f6f6 !important;
+}
+
+.article-list{
+  transition:0.2s ease;
+}
+.article-list:hover{
+  cursor:pointer;
+}
+.article-list:active{
+  transform: scale(1.1);
 }
 
 .select:hover{
@@ -149,41 +166,47 @@ text-align: center;
     height: 300px;
 }
 .info-card{
+    background-color:#e6e6e6 !important;
+    color:#242424 !important;
     margin-top: 70px;
     border:none;
     margin-bottom: 100px;
-    box-shadow: 4px 4px 20px #E5E5E5;
+    height:450px;
+}
+.icons{
+  width: 48px;
+  height:48px;
 }
 .link{
-    color: #67A04B;
+  background-color:#e6e6e6 !important;
+  color:#242424 !important;
+  font-size:24px;
 }
-.link .github{
-    font-size:25px;
-}
-.link .linkedin{
-    font-size:25px;
-}
+
 /*Footer*/
-.footer{
-    background-color: #1d1d1d;
-    height: 250px;
-    font-size: 22px;
+#footer{
+  position:fixed;
+  bottom:0;
+  width:100%;
+
 }
-.footer .f-option{
-    color:#ffff;
-    background-color: #1d1d1d;
+.f-option{
+    color:#e6e6e6;
+    background-color: inherit !important;
     overflow: hidden;
     font-size: 16px;
     border:none;
     line-height: 10px;
 }
 .f-option:hover{
-
+  cursor:pointer;
     font-size:20px !important;
     color:#67A04B !important;
 }
-
-.footer h3{
+.footer-categories{
+  background-color:rgba(255, 255, 255, 0.068) !important;
+}
+h3{
     font-weight:bold;
     color: #67A04B;
 
@@ -196,6 +219,7 @@ text-align: center;
     color:#ffff;
     font-size: 16px;
 }
+
 #goog-gt-tt {display:none !important;}
 .goog-te-banner-frame {display:none !important;}
 .goog-te-menu-value:hover {text-decoration:none !important;}
