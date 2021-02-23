@@ -3,6 +3,7 @@ import Contact from '../Components/Contact'
 import LandingPage from '../Components/LandingPage'
 import ArticleCard from '../Components/ArticleCard'
 import Tutorial from '../Components/Tutorial'
+import SearchResults from '../Components/SearchResults'
 
 const links =[
     {
@@ -20,7 +21,7 @@ const links =[
         isLink: true
     },
     {
-        link: '/Articles',
+        link: '/Editing',
         title: 'Articles',
         component: ArticleCard,
         isExact: true,
@@ -39,6 +40,13 @@ const links =[
         component: Contact,
         isExact: true,
         isLink: true
+    },
+    {
+        link: '/Results',
+        title: 'Results',
+        component: SearchResults,
+        isExact: true,
+        isLink: false
     }
 ];
 

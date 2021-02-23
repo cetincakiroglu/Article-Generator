@@ -1,14 +1,15 @@
-import React,{useState, useRef, useEffect} from 'react'
+import React,{useState, useRef, useEffect, useContext } from 'react'
 import {Row, Col, Form} from 'react-bootstrap';
 import Articles from './Articles'
 import dummyData from '../Data/dummyData';
-
+import {Link} from 'react-router-dom'
 
 function LandingPage() {
 
 const [formInput,setFormInput] = useState([]);
+const [matchedArticle,setMatchedArticle] = useState([]);
 
-const [matchedArticle, setMatchedArticle] = useState([]);
+
 const [id, setid] = useState(-1);
 const userInput = useRef();
 
@@ -30,7 +31,7 @@ const searchArticles = (str) =>{
         .filter(item => item
         .includes(str.split(' ')[0].toLowerCase() || str.split(' ')[1].toLowerCase()));
 
-      setMatchedArticle([...matchedArticle, newArticle]);
+      setMatchedArticle([...matchedArticle,newArticle]);
     }
     //[...matchedArticle,newArticle] --> gives multiple articles, you need to fix edit by using article id's;
     //setMatchedArticle(newArticle) --->gives single result
@@ -44,20 +45,18 @@ const searchArticles = (str) =>{
     setMatchedArticle(article);
     setid(-1);
     
-    sessionStorage.setItem('article', JSON.stringify(article));
-  console.log(typeof article)
+  //   sessionStorage.setItem('article', JSON.stringify(article));
+  // console.log(typeof article)
     
   }
-  const getStoredArticle = () =>{
-    let storedArticle = JSON.parse(sessionStorage.getItem('article'));
-    if(storedArticle !== [[]] && storedArticle !== null) setMatchedArticle([...storedArticle]);
-  }
+  // const getStoredArticle = () =>{
+  //   let storedArticle = JSON.parse(sessionStorage.getItem('article'));
+  //   if(storedArticle !== [[]] && storedArticle !== null) setMatchedArticle([...storedArticle]);
+  // }
  
-  useEffect (()=>{
-    getStoredArticle();
-  },[])
-
-
+  // useEffect (()=>{
+  //   getStoredArticle();
+  // },[])
 
     return (
       <>
@@ -71,7 +70,9 @@ const searchArticles = (str) =>{
                placeholder="'Meditation and it's benefits'" 
                className="rounded-pill" />
             </Form.Group>
-             <button className="button submit-btn">Generate Article</button>
+             <button className="button submit-btn">
+               Generate Article
+               </button>
           </Form>
         </Col>
         <Articles

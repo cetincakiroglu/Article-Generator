@@ -13,10 +13,11 @@ function NavBar(props) {
     ))
     return (
         <>
-            <Navbar id="nav" className="d-flex justify-content-between">
+            <Navbar id="nav" className="d-flex justify-content-between p-4">
                 <Navbar.Brand href="#home">Article Generator</Navbar.Brand>
                 <Nav className="nav-elements">
                 {displayNav}
+                <div id="google_translate_element"></div>
                 </Nav>
             </Navbar>
         </>

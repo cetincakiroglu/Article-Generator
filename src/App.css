@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
-*{
-  background-color:#242424;
+.row,.container,.nav,.link,body,html{
+  background-color:#242424 !important;
   color:#f6f6f6;
 }
 
@@ -99,4 +99,109 @@ span,p,li,a,label,button,::placeholder{
 }
 .article-group{
   background-color:#f6f6f6 !important;
+}
+
+.select:hover{
+  cursor:pointer;  
+}
+
+
+.goog-te-gadget img{
+    display: none;
+}
+.goog-te-combo span{
+    display: none;
+}
+
+/*Navbar*/
+.option{
+    margin-left: 30px ;
+    font-size:20px;
+}
+.option:hover{
+    color: #ffff !important;
+    background-color: #67A04B;
+    border-radius: 2px;
+}
+.logo-picture{
+    
+    height: 80px;
+}
+.line{
+    width: 100%;
+    background-color: #0000;
+}
+
+/*About*/
+.about-text{
+    margin:170px 0;
+}
+#about-header{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+/*Contact*/
+.user{
+text-align: center;
+}
+.user .user-picture{
+
+    height: 300px;
+}
+.info-card{
+    margin-top: 70px;
+    border:none;
+    margin-bottom: 100px;
+    box-shadow: 4px 4px 20px #E5E5E5;
+}
+.link{
+    color: #67A04B;
+}
+.link .github{
+    font-size:25px;
+}
+.link .linkedin{
+    font-size:25px;
+}
+/*Footer*/
+.footer{
+    background-color: #1d1d1d;
+    height: 250px;
+    font-size: 22px;
+}
+.footer .f-option{
+    color:#ffff;
+    background-color: #1d1d1d;
+    overflow: hidden;
+    font-size: 16px;
+    border:none;
+    line-height: 10px;
+}
+.f-option:hover{
+
+    font-size:20px !important;
+    color:#67A04B !important;
+}
+
+.footer h3{
+    font-weight:bold;
+    color: #67A04B;
+
+}
+.our-information{
+    margin-top: 30px;
+    font-size: 28px;
+}
+.our-information p{
+    color:#ffff;
+    font-size: 16px;
+}
+#goog-gt-tt {display:none !important;}
+.goog-te-banner-frame {display:none !important;}
+.goog-te-menu-value:hover {text-decoration:none !important;}
+body {top:0 !important;}
+#google_translate_element2 {display:none!important;}
+#lang{
+    position: absolute;
+    right:0;
 }

@@ -2,7 +2,9 @@ const dummyData = [
 
     "Bitcoin is the hottest thing in the world of money today. It's a virtual currency that has captured the attention of so many people who are very interested to know more about it. It's basically a new way of acquiring money with no central authority. No country or financial institution acts as a middleman in this process which makes this currency secure and easy to use. All you need to do is store your Bitcoins on your computer and generate them using software with a process called 'mining'. ",
     "Meditation can give you a sense of calm, peace and balance that can benefit both your emotional well-being and your overall health. And these benefits don't end when your meditation session ends. Meditation can help carry you more calmly through your day and may help you manage symptoms of certain medical conditions.",
-    
+    "Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain Coffea species. When coffee berries turn from green to bright red in color – indicating ripeness – they are picked, processed, and dried.[2] Dried coffee seeds are roasted to varying degrees, depending on the desired flavor. Roasted beans are ground and then brewed with near-boiling water to produce the beverage known as coffee. ",
+    "The hazelnut is the fruit of the hazel and therefore includes any of the nuts deriving from species of the genus Corylus, especially the nuts of the species Corylus avellana. They are also known as cobnuts or filberts according to species.[1] A cob is roughly spherical to oval, about 15–25 mm (5⁄8–1 in) long and 10–15 mm (3⁄8–5⁄8 in) in diameter, with an outer fibrous husk surrounding a smooth shell and a filbert is more elongated, being about twice as long as its diameter. The nut falls out of the husk when ripe, about seven to eight months after pollination. The kernel of the seed is edible and used raw or roasted, or ground into a paste. The seed has a thin, dark brown skin, which is sometimes removed before cooking."
+
   ];
 
   export default dummyData;
