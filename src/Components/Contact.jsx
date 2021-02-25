@@ -7,7 +7,7 @@ function Contact() {
     return (
         <>
         <Container>
-            <Row >
+            <Row id="contact">
                 <Col >
                     <Card className="info-card">
                         <Card.Body>

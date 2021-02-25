@@ -3,7 +3,7 @@ import { Row, Col, Form } from 'react-bootstrap'
 
 
 function ArticleCard({saveEdit, setid,values}) {
-
+// class değiştirerek edit moduna geçebiliyoruz. 
     const [classToggler, setClassToggler] = useState(true);
     
     const textArea = useRef();
@@ -12,12 +12,12 @@ function ArticleCard({saveEdit, setid,values}) {
         e.preventDefault();
         handleDisplay();
     }
-
+//burada editliyoruz aşağıdan gönderdiğimiz objeyi
     const editArticle = (obj) => {
         textArea.current.value = obj.article;
         handleDisplay();
     }
-
+// componenti açıp kapatmak için koşul.
     const handleDisplay = () => {
         classToggler === true ? setClassToggler(false) : setClassToggler(true);
 //d-none d-block
@@ -25,6 +25,7 @@ function ArticleCard({saveEdit, setid,values}) {
     
     let showArticle;
    if(values[0]){
+       
        showArticle = Array(values.join(' ')).map((item, index) => {
             return (
                 <Col className='article col-md-10 offset-md-1 d-flex flex-column align-items-center mb-5'>
@@ -46,7 +47,7 @@ function ArticleCard({saveEdit, setid,values}) {
                             </button>
                         </div>
                     </Col>
-    
+{/*------------------------------------------------------------------ */}
                     {/* editing part starts */}
                     <Col className="article my-4 px-5">
                         <Form className={`form-edit d-${classToggler === true ? 'none' : 'block'}`} onSubmit={handleSubmit}>
@@ -63,7 +64,6 @@ function ArticleCard({saveEdit, setid,values}) {
                             <Form.Group className="text-center">
                                 <button
                                     onClick={() => saveEdit({
-                                        id: index,
                                         article: textArea.current.value
                                     })}
                                     className="button mt-4">

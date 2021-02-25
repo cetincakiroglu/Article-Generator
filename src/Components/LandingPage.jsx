@@ -2,35 +2,36 @@ import React,{useState, useRef, useEffect} from 'react'
 import {Row, Col, Form} from 'react-bootstrap';
 import Articles from './Articles'
 import dummyData from '../Data/dummyData';
-import {Link} from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 
 function LandingPage() {
 
 const [formInput,setFormInput] = useState([]);
 const [matchedArticle,setMatchedArticle] = useState([]);
 
-
+//bu id yi diğer componentta kullanacağız
 const [id, setid] = useState(-1);
 const userInput = useRef();
-
+//burada formdaki inputtan anahtar kelimeyi alıyoruz
 const handleSubmit = (e) =>{
   e.preventDefault();
     const keyword = userInput.current.value;
   console.log('keyword',keyword);
-
   setFormInput([...formInput, keyword])
   searchArticles(keyword);
+  // showBtn(); görmezden gel
   }
 
+  //Data klasöründeki dummyData'yı kullanıyorum. Orada arama yapıp benzeyen paragrafları getiriyor.
 const searchArticles = (str) =>{
-  if(str == false){
+  if(str == false){//string check
     alert('please enter a valid keyword')
   }else{
-      let newArticle = dummyData.map(item => item)
-        .filter(item => item
+      let newArticle = dummyData.filter(item => item
         .includes(str.split(' ')[0].toLowerCase() || str.split(' ')[1].toLowerCase()));
-
+        
       setMatchedArticle([...matchedArticle,newArticle]);
+      console.log(matchedArticle);
     }
   }
   

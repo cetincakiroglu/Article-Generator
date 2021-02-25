@@ -4,6 +4,7 @@ import LandingPage from '../Components/LandingPage'
 import ArticleCard from '../Components/ArticleCard'
 import Tutorial from '../Components/Tutorial'
 import SearchResults from '../Components/SearchResults'
+import SavedArticles from '../Components/SavedArticles'
 
 const links =[
     {
@@ -47,6 +48,13 @@ const links =[
         component: SearchResults,
         isExact: true,
         isLink: false
+    },
+    {
+        link: '/Saved',
+        title:'Saved Articles',
+        component: SavedArticles,
+        isExact: true,
+        isLink: true
     }
 ];
 

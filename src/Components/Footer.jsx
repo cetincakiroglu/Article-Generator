@@ -8,8 +8,7 @@ function Footer(){
         <>
            
                 <div className="container-fluid">
-                    <Row className="mt-5 pt-3 pb-3 d-flex" id="footer">
-            
+                    <Row className="mt-5 p-3 d-flex" id="footer">
                         <Col className="our-information text-center">
                             <h6 className="green">Mustafa Koşmaz</h6>
                             <Card.Link href="https://www.linkedin.com/in/neverrun/"><FaLinkedin className="icons"/></Card.Link>
