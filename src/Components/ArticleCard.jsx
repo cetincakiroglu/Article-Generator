@@ -3,7 +3,7 @@ import { Row, Col, Form } from 'react-bootstrap'
 
 
 function ArticleCard({saveEdit, setid,values}) {
-// class değiştirerek edit moduna geçebiliyoruz. 
+
     const [classToggler, setClassToggler] = useState(true);
     
     const textArea = useRef();
@@ -15,9 +15,10 @@ function ArticleCard({saveEdit, setid,values}) {
 //burada editliyoruz aşağıdan gönderdiğimiz objeyi
     const editArticle = (obj) => {
         textArea.current.value = obj.article;
+        console.log('EDIT ARTICLE', obj)
         handleDisplay();
     }
-// componenti açıp kapatmak için koşul.
+
     const handleDisplay = () => {
         classToggler === true ? setClassToggler(false) : setClassToggler(true);
 //d-none d-block

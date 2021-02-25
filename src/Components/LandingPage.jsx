@@ -30,8 +30,9 @@ const searchArticles = (str) =>{
       let newArticle = dummyData.filter(item => item
         .includes(str.split(' ')[0].toLowerCase() || str.split(' ')[1].toLowerCase()));
         
-      setMatchedArticle([...matchedArticle,newArticle]);
-      console.log(matchedArticle);
+      setMatchedArticle([...newArticle]);
+      console.log('MATCHED ARTICLE', matchedArticle);
+   
     }
   }
   
