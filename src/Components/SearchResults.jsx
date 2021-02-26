@@ -8,11 +8,12 @@ function SearchResults({
     matchedArticle,
     setMatchedArticle,
     setid,
-    id
+    id,
+    values,
+    setValues
 }) {  
-    const [savedArticles, setSavedArticles] = useState([]);
-
-    const [values,setValues] = useState([])
+    
+   
 
     const getSelectedItems = (e) =>{
         e.stopPropagation();
@@ -27,18 +28,6 @@ function SearchResults({
             console.log(values)
         }
     }
-
-    const saveEdit = (obj) =>{
-      
-        const id =  Date.now().toString(36) + Math.random().toString(36).substr(2);
-        let article = { id: id, text:obj.article}
-        const newSavedArticles = [...savedArticles,article]
-        setSavedArticles(newSavedArticles)
-        localStorage.setItem('article', JSON.stringify(newSavedArticles));
-        
-        
-      }
-  
 
     let renderItems;
     //TODO: array'in ilk elementini kontrol etmezsek error veriyor anlamış değilim düzeltilecek
@@ -62,12 +51,16 @@ function SearchResults({
 
     return (
       <>
+      <Row className="d-flex flex-column justify-content-around">
+
         {renderItems}
         {/* burada ekrana veriyoruz */}
         <ArticleCard 
-        saveEdit = {saveEdit}
         values = {values}
+        setValues ={setValues}
         />
+      </Row>
+
       </>
     )
 }

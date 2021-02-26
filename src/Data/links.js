@@ -46,8 +46,8 @@ const links =[
         link: '/Results',
         title: 'Results',
         component: SearchResults,
-        isExact: true,
-        isLink: false
+        isExact: false,
+        isLink: true
     },
     {
         link: '/Saved',

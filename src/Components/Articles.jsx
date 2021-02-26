@@ -2,7 +2,7 @@ import React,{useRef, useState} from 'react'
 import {Row, Col, Form} from 'react-bootstrap'
 import ArticleCard from './ArticleCard'
 import SearchResults from './SearchResults'
-function Articles({ saveEdit, formInput , matchedArticle, setid,setIsEdit,isEdit}) {
+function Articles({ saveEdit, formInput , matchedArticle, setid,setIsEdit,isEdit,values,setValues}) {
 
 
     return (
@@ -15,6 +15,8 @@ function Articles({ saveEdit, formInput , matchedArticle, setid,setIsEdit,isEdit
                  setid = {setid}
                  setIsEdit = {setIsEdit}
                  isEdit = {isEdit}
+                 values ={values}
+                 setValues = {setValues}
                 />
                 {/* <ArticleCard
                 formInput={formInput}

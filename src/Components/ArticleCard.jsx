@@ -2,9 +2,10 @@ import React, { useState, useRef, useContext } from 'react'
 import { Row, Col, Form } from 'react-bootstrap'
 
 
-function ArticleCard({saveEdit, setid,values}) {
-
+function ArticleCard({values,setValues}) {
+    const [savedArticles, setSavedArticles] = useState([]);
     const [classToggler, setClassToggler] = useState(true);
+    const [id,setid] = useState(-1)
     
     const textArea = useRef();
 
@@ -19,6 +20,19 @@ function ArticleCard({saveEdit, setid,values}) {
         handleDisplay();
     }
 
+    const saveEdit = (obj) =>{
+
+        const randomID =  Date.now().toString(36) + Math.random().toString(36).substr(2);
+        const newInput = {id: randomID, text:obj.article}
+
+        setValues([newInput.text])
+        console.log(values)
+        const newSavedArticles = [...savedArticles,newInput]
+        setSavedArticles(newSavedArticles)
+        localStorage.setItem('article', JSON.stringify(newSavedArticles));
+        
+       
+      }
     const handleDisplay = () => {
         classToggler === true ? setClassToggler(false) : setClassToggler(true);
 //d-none d-block
@@ -43,7 +57,7 @@ function ArticleCard({saveEdit, setid,values}) {
                                     article: item
                                 })}
     
-                                className="button">
+                                className="button edit-btn">
                                 Select & Edit
                             </button>
                         </div>

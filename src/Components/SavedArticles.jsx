@@ -19,10 +19,7 @@ const getSavedItems = () =>{
         } else{
             return;
         }
-        // if(item !== [[]] && item !== null) setSavedItems([...item,item])
-        // if(savedItems.includes(item)){
-        //     console.log('SAVED ITEM ALREADY HERE')
-        // }
+    
     }
     
     
