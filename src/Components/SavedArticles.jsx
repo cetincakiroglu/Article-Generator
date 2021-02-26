@@ -66,12 +66,9 @@ const updateArticle = (obj) =>{
     alertify.success('Article Updated')
 }
 
-
-
-   
-        useEffect(()=>{
-            getSavedItems();
-        },[])   
+useEffect(()=>{
+    getSavedItems();
+},[])
     return (
         <>
         <Row className="my-5">
@@ -86,49 +83,42 @@ const updateArticle = (obj) =>{
                 <p>{item.text}</p>
                <div className="d-flex justify-content-around">
                
-                            <button
-                                onClick={() => deleteItem(index)}
-                                className="btn-secondary danger">
-                            <BiTrash className="react-icons"/>
-                            </button>
-                            <button
-                               onClick={() => editItem({
-                                id: item.id,
-                                article: item.text
-                            },index)}
-                                className="btn-secondary submit">
-                                <BiEdit className="react-icons"/>
-                            </button>
-               </div>
-                          
-                             {/* editing part starts */}        
+                    <button
+                        onClick={() => deleteItem(index)}
+                        className="btn-secondary danger">
+                    <BiTrash className="react-icons"/>
+                    </button>
+                    <button
+                        onClick={() => editItem({
+                        id: item.id,
+                        article: item.text
+                    },index)}
+                        className="btn-secondary submit">
+                        <BiEdit className="react-icons"/>
+                    </button>
+                    </div>
                 </Col>
             </> 
             ))}
-        <Col className={`article col-md-12 d-${classToggler === true ? 'none' : 'block'}`}>
+              {/* editing part starts */}        
+        <Col className={`article col-md-12 d-${classToggler===true ? 'none' : 'block' }`}>
         <Form className={`form-edit`} onSubmit={handleSubmit}>
-                            <Form.Group controlId="exampleForm.ControlTextarea1">
-                                <Form.Label
-                                    style={{ color: '#242424', fontWeight: '500' }}>
-                                    Edit Article
-                                </Form.Label>
-                                <Form.Control
-                                    className="input-field"
-                                    ref={text}
-                                    as="textarea" rows={5} />
-                            </Form.Group>
-                            <Form.Group className="text-center">
-                                <button
-                                    onClick={() => updateArticle({
-                                        article: text.current.value
-                                    })}
-                                    className="btn-regular submit">
-                                    Update
-                                </button>
-                            </Form.Group>
-                        </Form>
-        </Col>  
-      
+            <Form.Group controlId="exampleForm.ControlTextarea1">
+                <Form.Label style={{ color: '#242424', fontWeight: '500' }}>
+                    Edit Article
+                </Form.Label>
+                <Form.Control className="input-field" ref={text} as="textarea" rows={5} />
+            </Form.Group>
+            <Form.Group className="text-center">
+                <button onClick={()=> updateArticle({
+                    article: text.current.value
+                    })}
+                    className="btn-regular submit">
+                    Update
+                </button>
+            </Form.Group>
+        </Form>
+        </Col>
         </Row>
         </>
     )

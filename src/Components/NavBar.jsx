@@ -14,7 +14,7 @@ function NavBar(props) {
     return (
         <>
             <Navbar id="nav" className="d-flex justify-content-between p-0 m-0">
-                <Navbar.Brand className="pl-3" href="/">Article Generator</Navbar.Brand>
+                <Navbar.Brand id="logo" className="pl-3 green" href="/">Article Generator</Navbar.Brand>
                 <Nav className="nav-elements">
                 {displayNav}
                 </Nav>

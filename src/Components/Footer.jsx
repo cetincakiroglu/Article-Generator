@@ -9,6 +9,7 @@ function Footer(){
            
                 <div className="container-fluid">
                     <Row className="mt-5 p-3 d-flex" id="footer">
+                    <p style={{fontSize:'12px'}}>Made with <span className="green">❤</span> by our dev team</p>
                         <Col className="our-information text-center">
                             <h6 className="green">Mustafa Koşmaz</h6>
                             <Card.Link href="https://www.linkedin.com/in/neverrun/"><FaLinkedin className="icons"/></Card.Link>
@@ -33,3 +34,4 @@ function Footer(){
     );
 }
 export default Footer;
+// web scraping kullanma

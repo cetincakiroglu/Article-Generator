@@ -25,7 +25,9 @@ a:hover{
 }
 #nav,#footer{
   background-color:rgba(255, 255, 255, 0.068) !important;
- 
+}
+#logo{
+  font-family:'Ubuntu', sans-serif;
 }
 .nav-elements{
   background-color:transparent;
@@ -236,7 +238,6 @@ text-align: center;
   height:32px;
   border:none !important;
 }
-
 
 
 .link{
