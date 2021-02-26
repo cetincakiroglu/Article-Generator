@@ -1,11 +1,14 @@
 import React, { useState, useRef, useContext } from 'react'
+import {Link} from 'react-router-dom'
 import { Row, Col, Form } from 'react-bootstrap'
+import alertify from 'alertifyjs'
 
 
 function ArticleCard({values,setValues}) {
     const [savedArticles, setSavedArticles] = useState([]);
     const [classToggler, setClassToggler] = useState(true);
     const [id,setid] = useState(-1)
+    const [showBtn, setShowBtn] = useState(false);
     
     const textArea = useRef();
 
@@ -27,15 +30,28 @@ function ArticleCard({values,setValues}) {
 
         setValues([newInput.text])
         console.log(values)
-        const newSavedArticles = [...savedArticles,newInput]
+        let newSavedArticles = [...savedArticles,newInput]
         setSavedArticles(newSavedArticles)
-        localStorage.setItem('article', JSON.stringify(newSavedArticles));
+        if(localStorage.getItem('article')){
+            let storedItem = JSON.parse(localStorage.getItem('article'));
+            newSavedArticles = [...newSavedArticles,...storedItem]
+            localStorage.setItem('article', JSON.stringify(newSavedArticles));
+        }
         
-       
+       alertify.success('Article Saved')
+       handleBtn();
       }
     const handleDisplay = () => {
         classToggler === true ? setClassToggler(false) : setClassToggler(true);
 //d-none d-block
+    }
+
+    const handleBtn = () =>{
+       if(JSON.parse(localStorage.getItem('article'))[0]){
+           setShowBtn(true)
+       }else{
+           setShowBtn(false)
+       }
     }
     
     let showArticle;
@@ -50,16 +66,17 @@ function ArticleCard({values,setValues}) {
                                 {item}
                             </p>
                         </div>
-                        <div className="article-group mt-4 d-flex justify-content-center">
+                        <div className="article-group mt-4 d-flex justify-content-around">
                             <button
                                 onClick={() => editArticle({
                                     id: index,
                                     article: item
                                 })}
     
-                                className="button edit-btn">
+                                className="button btn-regular submit">
                                 Select & Edit
                             </button>
+                            <Link to='/Saved' id="saved" className={`btn-regular submit d-${showBtn === true ? 'block': 'none'}`}>Saved Articles</Link>
                         </div>
                     </Col>
 {/*------------------------------------------------------------------ */}
@@ -81,7 +98,7 @@ function ArticleCard({values,setValues}) {
                                     onClick={() => saveEdit({
                                         article: textArea.current.value
                                     })}
-                                    className="button mt-4">
+                                    className="mt-4 btn-regular submit">
                                     Save
                                 </button>
                             </Form.Group>

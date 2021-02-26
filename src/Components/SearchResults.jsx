@@ -2,6 +2,9 @@ import React,{useState, useEffect} from 'react'
 import {Col,Row, Form} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import ArticleCard from './ArticleCard';
+import alertify from 'alertifyjs'
+
+
 //bu componentta eşleşen paragrafları gösteriyoruz -----------------------
 
 function SearchResults({
@@ -13,19 +16,27 @@ function SearchResults({
     setValues
 }) {  
     
-   
+
+
+    const selectFeedback = () =>{
+        alertify.success('Paragraph Selected')
+    }
+    const deselectFeedback = () =>{
+        alertify.error('Paragraph Removed')
+    }
 
     const getSelectedItems = (e) =>{
         e.stopPropagation();
         const item = e.target.innerText;
         const array  =values;
         if(values.includes(item)){
-
             values.splice(item.index,1)
             setValues([...values]);
+            deselectFeedback();
         }else{
             setValues([...values,item]);
             console.log(values)
+            selectFeedback();
         }
     }
 
@@ -50,16 +61,13 @@ function SearchResults({
     
 
     return (
-      <>
-      <Row className="d-flex flex-column justify-content-around">
-
+        <>
         {renderItems}
         {/* burada ekrana veriyoruz */}
         <ArticleCard 
         values = {values}
         setValues ={setValues}
         />
-      </Row>
 
       </>
     )

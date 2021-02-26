@@ -2,13 +2,14 @@ import React,{useState, useRef, useEffect} from 'react'
 import {Row, Col, Form} from 'react-bootstrap';
 import Articles from './Articles'
 import dummyData from '../Data/dummyData';
-import { useHistory, useLocation } from 'react-router-dom'
+import { useHistory, useLocation, Link } from 'react-router-dom'
 import SearchResults from './SearchResults';
 function LandingPage() {
 //VALUES STATE'INI BURADA BELIRLE, VALUES'U TEKRAR ARAMA YAPTIĞINDA SIFIRLAMAN LAZIM.
 const [values,setValues] = useState([]);
 const [formInput,setFormInput] = useState([]);
 const [matchedArticle,setMatchedArticle] = useState([]);
+
 
 //bu id yi diğer componentta kullanacağız
 const [id, setid] = useState(-1);
@@ -59,6 +60,7 @@ const searchArticles = (str) =>{
                Generate Article
             </button> 
           </Form>
+         
         </Col>
         <Articles
         formInput = {formInput}

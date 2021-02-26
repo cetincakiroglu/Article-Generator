@@ -7,6 +7,9 @@ function Contact() {
     return (
         <>
         <Container>
+        <Row className="my-5">
+            <h2 className="green pl-3">Contact</h2>
+        </Row>
             <Row id="contact">
                 <Col >
                     <Card className="info-card">

@@ -4,8 +4,8 @@ import {Row, Col} from 'react-bootstrap'
 function Tutorial() {
     return (
         <>
-        <Row className="mt-5">
-            <h2>How It Works?</h2>
+       <Row className="my-5">
+            <h2 className="green pl-3">How It Works?</h2>
         </Row>
         <Row className="mt-5 d-flex">
             <Col md={12} className="mb-5 mt-5 text-center">

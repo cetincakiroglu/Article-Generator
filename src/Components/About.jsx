@@ -4,10 +4,12 @@ import {Row,Col} from 'react-bootstrap'
 function About() {
     return (
         <>
+        <Row className="my-5">
+            <h2 className="green pl-3">About Us</h2>
+        </Row>
         <Row className="about-text">
             <Col>
             <div className="container">
-                <h2 id="about-header">About</h2>
                 Article Generator has emerged as a result of this adventure set out with 3 developers from Kodluyoruz 78.Adana Full Stack Web Development Bootcamp.
                 <br /><br />
                 In this period when our time was our biggest competitor,

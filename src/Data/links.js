@@ -46,15 +46,16 @@ const links =[
         link: '/Results',
         title: 'Results',
         component: SearchResults,
-        isExact: false,
-        isLink: true
+        isExact: true,
+        isLink: false
     },
     {
         link: '/Saved',
         title:'Saved Articles',
         component: SavedArticles,
         isExact: true,
-        isLink: true
+        isLink: true,
+        isGreen:true
     }
 ];
 

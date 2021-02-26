@@ -3,6 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import {Container, Row, Col} from 'react-bootstrap'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import 'alertifyjs/build/css/alertify.css';
 
 import NavBar from './Components/NavBar'
 import Footer from './Components/Footer'
@@ -22,7 +23,6 @@ function App() {
   ))
   return (
     <>
-  
     <BrowserRouter>
     <NavBar 
     links={links}
@@ -30,9 +30,8 @@ function App() {
     <Container id="main-wrapper" >
       {routeMaps}
     </Container>
-
+<Footer />
     </BrowserRouter>
-
     </>
   );
 }
