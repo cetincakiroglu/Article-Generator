@@ -7,7 +7,7 @@ function Tutorial() {
        <Row className="my-5">
             <h2 className="green pl-3">How It Works?</h2>
         </Row>
-        <Row className="mt-5 d-flex">
+        <Row className="mt-5 d-flex content">
             <Col md={12} className="mb-5 mt-5 text-center">
                 <h4>Using the Article Generator is even easier than you think. Our text generator is made to save time by using it easily for all people, regardless of age. </h4>
             </Col>

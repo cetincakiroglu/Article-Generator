@@ -3,7 +3,8 @@ import {Row, Col, Form} from 'react-bootstrap';
 import Articles from './Articles'
 import dummyData from '../Data/dummyData';
 import { useHistory, useLocation, Link } from 'react-router-dom'
-import SearchResults from './SearchResults';
+import ScrollArrow from './ScrollArrow'
+
 function LandingPage() {
 //VALUES STATE'INI BURADA BELIRLE, VALUES'U TEKRAR ARAMA YAPTIĞINDA SIFIRLAMAN LAZIM.
 const [values,setValues] = useState([]);
@@ -19,9 +20,9 @@ const history = useHistory();
 const handleSubmit = (e) =>{
   e.preventDefault();
     const keyword = userInput.current.value;
-  console.log('keyword',keyword);
-  setFormInput([...formInput, keyword])
-  searchArticles(keyword);
+    console.log('keyword',keyword);
+    setFormInput([...formInput, keyword])
+    searchArticles(keyword);
   
   }
 const resetValues = ()=>{
@@ -43,9 +44,11 @@ const searchArticles = (str) =>{
    
     }
   }
+
   
     return (
       <>
+      <Row >
         <Col>
           <Form id="form" onSubmit={handleSubmit} className="d-flex flex-column justify-content-around align-items-center">
             <Form.Group controlId="formBasicEmail" className="input-field">
@@ -62,6 +65,9 @@ const searchArticles = (str) =>{
           </Form>
          
         </Col>
+      </Row>
+      <Row className="d-flex flex-column">
+
         <Articles
         formInput = {formInput}
         matchedArticle = {matchedArticle}
@@ -70,6 +76,8 @@ const searchArticles = (str) =>{
         values = {values}
         setValues = {setValues}
         />
+      <ScrollArrow />
+      </Row>
       </>
     )
 }

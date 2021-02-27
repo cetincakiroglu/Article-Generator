@@ -3,6 +3,7 @@ import {Row,Col,Card, Form} from 'react-bootstrap'
 import alertify from 'alertifyjs'
 import {BiEdit, BiTrash} from 'react-icons/bi'
 import {FaGithub} from 'react-icons/fa'
+import ScrollArrow from './ScrollArrow'
 
 
 function SavedArticles() {
@@ -120,6 +121,7 @@ useEffect(()=>{
         </Form>
         </Col>
         </Row>
+        <ScrollArrow className="align-self-end" />
         </>
     )
 }

@@ -17,14 +17,7 @@ function Articles({ saveEdit, formInput , matchedArticle, setid,setIsEdit,isEdit
                  isEdit = {isEdit}
                  values ={values}
                  setValues = {setValues}
-                />
-                {/* <ArticleCard
-                formInput={formInput}
-                matchedArticle = {matchedArticle}
-                saveEdit = {saveEdit}
-                setid = {setid}
-                /> */}
-         
+                />         
             </Row>
         </>
     )

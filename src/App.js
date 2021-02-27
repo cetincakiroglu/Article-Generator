@@ -27,10 +27,12 @@ function App() {
     <NavBar 
     links={links}
     />
-    <Container id="main-wrapper" >
+    <Container>
+
       {routeMaps}
     </Container>
-<Footer />
+    {/* <Footer className="width"/> */}
+
     </BrowserRouter>
     </>
   );
