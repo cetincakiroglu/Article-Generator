@@ -6,7 +6,7 @@ import Articles from './Articles'
 function LandingPage() {
 
   const [formInput,setFormInput] = useState([]);
-  
+
  //dummy data
  const dummyArticle = [
 
@@ -25,6 +25,45 @@ function LandingPage() {
     searchArticles(keyword);
     }
 
+//I ADDED HERE MY WORK AS COMMENT TO PREVENT ANY CAUSE ON THIS PROJECT
+/*
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const keyword = userInput.current.value;
+  const res = fetch(`http://localhost:5000/search?q=${keyword}`)
+              .then(response => response.json())
+              .then(dat => setData(dat))
+              .catch(err => console.log(err))
+
+  }
+
+
+
+
+////HERE IS PUT FOR WORKING WHEN QUOTA IS FINISHED
+const res = fetch(`http://localhost:5000/simulate`)
+.then(response => response.json())
+.then(dat => setData(dat))
+.catch(err => console.log(err))
+
+////HERE IS PUT FOR WORKING WHEN QUOTA IS FINISHED
+
+//////PARAGRAPHS CAN BE OBTAINED WITH THIS COMMANDS//////////
+const datt = data.map(d =>
+  <div key={d.id}>
+  <p>{d.paragraph}</p>
+  </div>
+)
+//////PARAGRAPHS CAN BE OBTAINED WITH THIS COMMANDS//////////
+*/
+//MY WORK IS FINISHED ON THIS PAGE
+//IF YOU ENCOUNTER ANY OF PROBLEM, IMMEDIATELY CONTACT WITH ME, BECAUSE I HAVE TO PREPARE FOR PRESENTATION.
+//IF IT IS REQUIRED FEEL FREE TO CALL ME! ANYONE CAN CALL ME WHO KNOWS MY PHONE NUMBER.
+
+
+
+
+
     const [matchedArticle, setMatchedArticle] = useState([]);
 
     const searchArticles = (str) =>{
@@ -41,7 +80,7 @@ function LandingPage() {
 
     const saveEdit = (obj) =>{
       const editedArticle = obj.article;
-      
+
       setMatchedArticle([editedArticle]);
       console.log('edited version',matchedArticle);
     }
@@ -54,8 +93,8 @@ function LandingPage() {
               <Form.Label>What do you want to write about ?</Form.Label>
               <Form.Control
                type="text"
-               ref={userInput} 
-               placeholder="'Meditation and it's benefits'" 
+               ref={userInput}
+               placeholder="'Meditation and it's benefits'"
                className="rounded-pill" />
             </Form.Group>
              <button className="button submit-btn">Generate Article</button>
@@ -67,6 +106,7 @@ function LandingPage() {
         setMatchedArticle = {setMatchedArticle}
         saveEdit = {saveEdit}
         />
+        {datt}
       </>
     )
 }
