@@ -25,7 +25,7 @@ function LandingPage() {
     searchArticles(keyword);
     }
 
-//I ADDED HERE MY WORK AS COMMENT TO PREVENT ANY CAUSE ON THIS PROJECT
+//I ADDED HERE MY WORK AS COMMENT TO AVOID ANY PROBLEM ON THIS PROJECT
 /*
 const handleSubmit = (e) => {
   e.preventDefault();
