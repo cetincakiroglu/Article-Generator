@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
+/*UNIVERSAL SETTINGS*/
+html{
+  scroll-behavior: smooth;
+}
 .row,.container,.nav,.link,body,html{
   background-color:#242424 !important;
   color:#f6f6f6;
@@ -23,13 +27,29 @@ span,p,li,a,label,button,::placeholder{
   font-size:18px;
   font-weight:300;
 }
+p{
+  line-height:1.750rem;
+}
 a{
   text-decoration:none;
 }
 a:hover{
   text-decoration:none !important;
 }
+.heading{
+  font-size: default;
+}
 
+#footer{
+  clear:both;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+/*NAV*/
 #nav,#footer{
   background-color:rgba(255, 255, 255, 0.068) !important;
 }
@@ -48,6 +68,14 @@ a:hover{
  
   color:#81c55f !important;
 }
+.nav-elements:focus-visible,
+.nav-items:focus-visible,
+.nav-items>a:focus-visible{
+ 
+ border:none;
+ outline:none;
+}
+
 .nav-elements, a{
   
   color:#f6f6f6 !important;
@@ -67,6 +95,7 @@ a:hover{
 .border-green{
   border:2px solid #81c55f;
 }
+/*INPUT GROUPS*/
 #form{
   margin:20% auto !important;
   height:200px;
@@ -102,7 +131,8 @@ a:hover{
 #formBasicEmail:focus{
   border:1px solid #81c55f;
 }
-/*buttons*/
+
+/*BUTTONS*/
 
 .button{
   border:1px solid #81c55f;
@@ -157,6 +187,8 @@ a:hover{
   color:#81c55f !important;
   border:1px solid #81c55f !important;
 }
+
+/*CARDS*/
 #saved{
   font-weight:500;
   font-family:inherit;

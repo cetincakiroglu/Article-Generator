@@ -9,9 +9,6 @@ import NavBar from './Components/NavBar'
 import Footer from './Components/Footer'
 import links from './Data/links'
 
-
-
-
 function App() {
   const routeMaps = links.map((item,index)=>(
     <Route 
@@ -23,17 +20,15 @@ function App() {
   ))
   return (
     <>
-    <BrowserRouter>
-    <NavBar 
-    links={links}
-    />
-    <Container>
-
-      {routeMaps}
-    </Container>
-    {/* <Footer className="width"/> */}
-
-    </BrowserRouter>
+      <BrowserRouter>
+        <NavBar
+          links={links}
+        />
+        <Container id="main">
+          {routeMaps}
+        </Container>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
