@@ -7,7 +7,7 @@ function Footer(){
     return (
         <>
 
-        <Row className="mt-5 mr-0 ml-0 p-3 g-0 d-flex align-self-end" id="footer">
+        <Row className="mt-5 mr-0 ml-0 p-2 g-0 d-flex align-self-end" id="footer">
         <p style={{fontSize:'12px'}}>Made with <span className="green">❤</span> by our dev team</p>
             <Col className="our-information text-center">
                 <h6 className="green">Mustafa Koşmaz</h6>
@@ -25,8 +25,8 @@ function Footer(){
             <Card.Link href="https://github.com/SalihaSahin"><FaGithub className="icons"/></Card.Link>
             </Col>
         </Row>
+
         </>
     );
 }
 export default Footer;
-// web scraping kullanma

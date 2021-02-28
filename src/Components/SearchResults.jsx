@@ -3,6 +3,7 @@ import {Col,Row, Form} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import ArticleCard from './ArticleCard';
 import alertify from 'alertifyjs'
+import Spinner from './Spinner'
 
 
 //bu componentta eşleşen paragrafları gösteriyoruz -----------------------
@@ -47,7 +48,7 @@ function SearchResults({
         <Col className={`article my-4 px-5`}>
             <div className="article-group select text-left" >
                 <p>
-                {item}
+                {item.paragraph}
                 </p>
             </div>
         </Col>
@@ -60,7 +61,7 @@ function SearchResults({
 
     return (
         <>
-        {renderItems}
+        {matchedArticle[0] ? (renderItems) : (<Spinner />)}
         <ArticleCard 
         values = {values}
         setValues ={setValues}

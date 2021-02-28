@@ -14,12 +14,11 @@ function SavedArticles() {
 const getSavedItems = () =>{
         const items = JSON.parse(localStorage.getItem('article'));
         if(items !== null){
-            console.log('SAVED',items)
+            // console.log('SAVED',items)
             const newItems = items;
-            console.log('NEWITEMS', newItems)
-            // setSavedItems(newItems);
+            // console.log('NEWITEMS', newItems)
             setSavedItems(newItems)
-            console.log('SAVED ITEMS' ,savedItems)
+            // console.log('SAVED ITEMS' ,savedItems)
         } else{
             return;
         }
@@ -42,10 +41,14 @@ const deleteItem = (num) =>{
 const editItem = (obj,num) =>{
     setid(obj.id);
     text.current.value = obj.article;
-    console.log(obj,num)
+    // console.log(obj,num)
     handleDisplay();
-}
+    scrollBottom();
 
+}
+const scrollBottom = () =>{
+    window.scrollTo(0,2000);
+}
 
 const handleSubmit = (e) =>{
     e.preventDefault();

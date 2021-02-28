@@ -29,6 +29,14 @@ const links =[
         isLink: false
     },
     {
+        link: '/Saved',
+        title:'Saved Articles',
+        component: SavedArticles,
+        isExact: true,
+        isLink: true,
+        isGreen:true
+    },
+    {
         link: '/About',
         title: 'About',
         component: About,
@@ -48,14 +56,6 @@ const links =[
         component: SearchResults,
         isExact: true,
         isLink: false
-    },
-    {
-        link: '/Saved',
-        title:'Saved Articles',
-        component: SavedArticles,
-        isExact: true,
-        isLink: true,
-        isGreen:true
     }
 ];
 

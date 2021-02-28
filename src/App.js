@@ -26,8 +26,8 @@ function App() {
         />
         <Container id="main">
           {routeMaps}
-        </Container>
         <Footer />
+        </Container>
       </BrowserRouter>
     </>
   );

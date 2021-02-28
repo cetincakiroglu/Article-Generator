@@ -1,14 +1,14 @@
 import React,{useState, useRef, useEffect} from 'react'
 import {Row, Col, Form} from 'react-bootstrap';
 import Articles from './Articles'
-import dummyData from '../Data/dummyData';
-import { useHistory, useLocation, Link } from 'react-router-dom'
 import ScrollArrow from './ScrollArrow'
+import Spinner from './Spinner'
 
 function LandingPage() {
 //VALUES STATE'INI BURADA BELIRLE, VALUES'U TEKRAR ARAMA YAPTIĞINDA SIFIRLAMAN LAZIM.
 const [values,setValues] = useState([]);
 const [formInput,setFormInput] = useState([]);
+const [showSpinner, setShowSpinner] = useState(1);
 
 //bu state ile eşleşen makaleler gidiyor, bu state'i güncelle
 const [matchedArticle,setMatchedArticle] = useState([]);
@@ -17,43 +17,39 @@ const [matchedArticle,setMatchedArticle] = useState([]);
 //bu id yi diğer componentta kullanacağız
 const [id, setid] = useState(-1);
 const userInput = useRef();
-const history = useHistory();
 //burada formdaki inputtan anahtar kelimeyi alıyoruz
 
 const handleSubmit = (e) =>{
   e.preventDefault();
     const keyword = userInput.current.value;
-    console.log('keyword',keyword);
     setFormInput([...formInput, keyword])
-    searchArticles(keyword);
-    //fetch yaparsan searchArticles'ı commitle, dummyData'dan veri çekiyor.
-  
-  }
-
+    getData(keyword)
+}
 
 const resetValues = ()=>{
+  setShowSpinner(0)
+  console.log(showSpinner)
   let array = values;
   if(array[0]){
     setValues(array.splice(0,-1))
   }
-}
-  //Data klasöründeki dummyData'yı kullanıyorum. Orada arama yapıp benzeyen paragrafları getiriyor.
-const searchArticles = (str) =>{
-  if(str == false){//string check
-    alert('please enter a valid keyword')
-  }else{
-
-    
-      let newArticle = dummyData.filter(item => item
-        .includes(str.split(' ')[0].toLowerCase() || str.split(' ')[1].toLowerCase()));
-        
-      setMatchedArticle([...newArticle]);//state güncelleme
-      console.log('MATCHED ARTICLE', matchedArticle);
-   
+} 
+const getData = async function (str) {
+  let requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+  };
+  try{
+    fetch(`http://localhost:5000/search?q${str}`, requestOptions)
+      .then(response => response.json())
+      .then(result => setMatchedArticle(result));
+      setShowSpinner(0)
     }
+    // https://protoback-adana.herokuapp.com/search?q=artificial+intelligence
+    catch(err){
+      console.log(err)
+    };
   }
-
-  
     return (
       <>
       <Row >
@@ -84,7 +80,9 @@ const searchArticles = (str) =>{
         values = {values}
         setValues = {setValues}
         />
-      <ScrollArrow />
+      {}
+      {/* <Spinner showSpinner={showSpinner}/> */}
+      <ScrollArrow />      
       </Row>
       </>
     )

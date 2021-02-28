@@ -22,10 +22,7 @@ const ScrollArrow = () =>{
 
   return (
       <>
-      
         <BiArrowToTop className="align-self-center scrollTop" onClick={scrollTop} style={{display: showScroll ? 'block' : 'none'}} /> 
-     
-
       </>
   );
 }
