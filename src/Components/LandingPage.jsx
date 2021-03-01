@@ -78,7 +78,7 @@ const getData = async function (str) {
         values = {values}
         setValues = {setValues}
         />
-      <ScrollArrow />      
+      <ScrollArrow />
       </Row>
       </>
     )

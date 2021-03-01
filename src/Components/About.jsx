@@ -11,7 +11,7 @@ function About() {
             <Col>
             <div className="container">
                <p>
-               Article Generator has emerged as a result of this adventure set out with 3 developers, <span className="green">Çetin Çakıroğlu, Saliha Şahin, Mustafa Koşmaz</span> from Kodluyoruz 78.Adana Full Stack Web Development Bootcamp.
+               <span className="notranslate">Article Generator </span> has emerged as a result of this adventure set out with 3 developers, <span className="green">Çetin Çakıroğlu, Saliha Şahin, Mustafa Koşmaz</span> from <span className="notranslate"> Kodluyoruz</span> 78.Adana Full Stack Web Development Bootcamp.
                    </p> 
               <p>
               In this period when our time was our biggest competitor,
