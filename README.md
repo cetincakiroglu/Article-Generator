@@ -2,7 +2,7 @@
 
 - Article Generator is a content maker, aims to bring relevant paragraphs by keyword input from the user.
 - User can add, remove, edit, save, update or delete articles.
-- This project is a result of 2 weeks of sprint period. Updates, improvements and refactoring will be applied in future sprints.
+- **This project is a result of 2 weeks of sprint period. Updates, improvements and refactoring will be applied in future sprints.**
 
 ### Team Members
 - Çetin Çakıroğlu / UX-frontend-backend / [linkedIn](https://www.linkedin.com/in/cakiroglu-cetin/) [Github](https://github.com/cetincakiroglu)
