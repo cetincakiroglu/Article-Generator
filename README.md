@@ -1,13 +1,20 @@
-# Project: X 
+# Project: Article Generator
 
-- X is an article generator aims to bring relevant articles by keyword input from the user.
+- Article Generator is a content maker, aims to bring relevant paragraphs by keyword input from the user.
+- User can add, remove, edit, save, update or delete articles.
+- This project is a result of 2 weeks of sprint period. Updates and improvements will be applied in future sprints.
 
+### Team Members
+- Çetin Çakıroğlu / UX-frontend-backend / [linkedIn](https://www.linkedin.com/in/cakiroglu-cetin/) [Github](https://github.com/cetincakiroglu)
+- Saliha Şahin / UI-frontend /[linkedIn](https://www.linkedin.com/in/saliha-%C5%9Fahin-45651a19a/) [Github](https://github.com/SalihaSahin)
+- Mustafa Koşmaz / Backend /[linkedIn](https://www.linkedin.com/in/neverrun/) [Github](https://github.com/01mk027)
 ### Technologies Used
 - React.js
 - React Bootstrap
 - Node.js
+- Express.js
+- Cheerio
 - Google Custom Search API
-- DeepAI Text Generation API
 - Heroku
 
 ### Task List
@@ -26,6 +33,7 @@
     4. [x] How it works page.
     5. [x] Contact page.
     6. [x] About us page. 
+    7. [x] Saved Articles component.
     
 ### Stage III // Fake data
 - [x] Implement input field, user should be able to enter keywords.
@@ -38,26 +46,39 @@
     2. [x] Add class toggler to buttons. Article Card should be hidden when user is editing.
     3. [x] Implement a save button, it should hide text area and show article card on click.
     4. [x] Update article card with edited article.
-    5. [ ] Initialize the local storage and save updated article.
+    5. [x] Transfer saved article to Saved Articles component.
+    6. [x] Initialize the local storage and save updated article.
     
 
 ### Stage IV // Real data
-- [ ] Perform a search on Google by keywords with Google Custom Search API.
-    1. [ ] Get articles from Google search results.
-    2. [ ] Send articles in an array by state to child components.
-    3. [ ] Generate articles.
-- [ ] Implement DeepAI Text Generation API.
-- [ ] Implement spell checker API. /optional/
-- [ ] User testing.
+- [x] Perform a search on Google by keywords with Google Custom Search API.
+- [x] Build a node app to scrape websites.
+- [x] Build an API to establish communication between Node app and frontend.
+- [x] Display articles in frontend.
+
+
 ### Stage V // Revision
-- [ ] Code static components.
-    1. [ ] How it works?
-    2. [ ] About us
-    3. [ ] Contact
-- [ ] Implement react router dom.
-- [ ] Refactor components, improve code quality.
-- [ ] Improve styling, make it more responsive.
-- [ ] Check cross-browser compatibility
+- [x] Complete static components.
+    1. [x] How it works?
+    2. [x] About us
+    3. [x] Contact
+- [x] Implement react router dom.
+- [x] Refactor components, improve code quality.
+- [x] Improve styling, make it more responsive.
+- [x] Check cross-browser compatibility
 - [ ] Deploy.
 ---
 
+### Project Images
+
+![Landing Page] (./src/Images/ProjectImages/initial-landing.png)
+
+![Search Results] (./src/Images/ProjectImages/searchResults.png)
+
+![Editing Articles] (./src/Images/ProjectImages/edit1.png)
+
+![Editing Articles] (./src/Images/ProjectImages/edit2.png)
+
+![Saved Articles] (./src/Images/ProjectImages/savedArticles.png)
+
+![Saved Articles Edit] (./src/Images/ProjectImages/savedArticles2.png)
