@@ -66,7 +66,7 @@
 - [x] Refactor components, improve code quality.
 - [x] Improve styling, make it more responsive.
 - [x] Check cross-browser compatibility
-- [ ] Deploy.
+- [ ] Deploy. (link will be added soon...)
 
 ---
 
