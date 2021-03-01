@@ -43,8 +43,7 @@ const editItem = (obj,num) =>{
     text.current.value = obj.article;
     // console.log(obj,num)
     handleDisplay();
-    scrollBottom();
-
+    setTimeout(scrollBottom,100)
 }
 const scrollBottom = () =>{
     window.scrollTo(0,2000);
@@ -78,7 +77,7 @@ useEffect(()=>{
         <Row className="my-5">
             <h2 className="green pl-3">Saved Articles</h2>
         </Row>
-        <Row className="d-flex justify-content-between">
+        <Row className="d-flex mb-5 justify-content-between">
         
            {savedItems.map((item,index)=>(
             <>

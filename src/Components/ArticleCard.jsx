@@ -2,6 +2,7 @@ import React, { useState, useRef, useContext } from 'react'
 import {Link} from 'react-router-dom'
 import { Row, Col, Form } from 'react-bootstrap'
 import alertify from 'alertifyjs'
+import Spinner from './Spinner'
 
 
 function ArticleCard({values,setValues}) {

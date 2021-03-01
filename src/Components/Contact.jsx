@@ -4,6 +4,8 @@ import {FaGithub, FaLinkedin} from "react-icons/fa";
 import {Link} from 'react-router-dom'
 
 import cetincakiroglu from '../Images/cetincakiroglu.jpg'
+import salihasahin from '../Images/salihasahin.jpg'
+import mustafakosmaz from '../Images/mustafakosmaz.jpg'
 
 function Contact() {
     return (
@@ -19,7 +21,7 @@ function Contact() {
                             <Card.Title className="text-center"><b>Saliha Şahin</b></Card.Title>
                             <hr className="contact-line"/>
                             <Col className="text-center">
-                                <img className="devteam" src={cetincakiroglu} />
+                                <img className="devteam" src={salihasahin} />
                             </Col>
                             <hr className="contact-line"/>
                             <Card.Text className="text-center contact-info">
@@ -40,7 +42,7 @@ function Contact() {
                             <Card.Title className="text-center"><b>Mustafa Koşmaz</b></Card.Title>
                             <hr className="contact-line"/>
                             <Col className="text-center">
-                                <img className="devteam" src={cetincakiroglu} />
+                                <img className="devteam" src={mustafakosmaz} />
                             </Col>
                             <hr className="contact-line"/>
                             <Card.Text className="text-center contact-info">

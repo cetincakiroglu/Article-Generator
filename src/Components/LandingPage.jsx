@@ -4,30 +4,27 @@ import Articles from './Articles'
 import ScrollArrow from './ScrollArrow'
 import Spinner from './Spinner'
 
+
 function LandingPage() {
-//VALUES STATE'INI BURADA BELIRLE, VALUES'U TEKRAR ARAMA YAPTIĞINDA SIFIRLAMAN LAZIM.
+
 const [values,setValues] = useState([]);
 const [formInput,setFormInput] = useState([]);
-const [showSpinner, setShowSpinner] = useState(1);
-
-//bu state ile eşleşen makaleler gidiyor, bu state'i güncelle
+const [showSpinner, setShowSpinner] = useState(0);
 const [matchedArticle,setMatchedArticle] = useState([]);
-
-
-//bu id yi diğer componentta kullanacağız
 const [id, setid] = useState(-1);
+
 const userInput = useRef();
-//burada formdaki inputtan anahtar kelimeyi alıyoruz
 
 const handleSubmit = (e) =>{
   e.preventDefault();
+  setShowSpinner(1);
+  console.log(showSpinner)
     const keyword = userInput.current.value;
     setFormInput([...formInput, keyword])
     getData(keyword)
 }
 
 const resetValues = ()=>{
-  setShowSpinner(0)
   console.log(showSpinner)
   let array = values;
   if(array[0]){
@@ -40,10 +37,10 @@ const getData = async function (str) {
     redirect: 'follow'
   };
   try{
-    fetch(`http://localhost:5000/search?q${str}`, requestOptions)
+      fetch(`http://localhost:5000/search?q=${str}`, requestOptions)
       .then(response => response.json())
-      .then(result => setMatchedArticle(result));
-      setShowSpinner(0)
+      .then(result => setMatchedArticle(result))
+      .then(()=>setShowSpinner(0))
     }
     // https://protoback-adana.herokuapp.com/search?q=artificial+intelligence
     catch(err){
@@ -52,7 +49,7 @@ const getData = async function (str) {
   }
     return (
       <>
-      <Row >
+      <Row className="mb-5" >
         <Col>
           <Form id="form" onSubmit={handleSubmit} className="d-flex flex-column justify-content-around align-items-center">
             <Form.Group controlId="formBasicEmail" className="input-field">
@@ -68,9 +65,10 @@ const getData = async function (str) {
             </button> 
           </Form>
          
+        <Spinner showSpinner ={showSpinner}/>
         </Col>
       </Row>
-      <Row className="d-flex flex-column">
+      <Row className="d-flex flex-column mt-5">
 
         <Articles
         formInput = {formInput}
@@ -80,8 +78,6 @@ const getData = async function (str) {
         values = {values}
         setValues = {setValues}
         />
-      {}
-      {/* <Spinner showSpinner={showSpinner}/> */}
       <ScrollArrow />      
       </Row>
       </>
