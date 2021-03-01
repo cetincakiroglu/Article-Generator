@@ -71,15 +71,19 @@
 ---
 
 ### Project Images
-
+Landing Page
 ![Landing Page](./src/Images/ProjectImages/initial-landing.png)
 
+Search Results
 ![Search Results](./src/Images/ProjectImages/searchResults.png)
 
+Editing Articles
 ![Editing Articles](./src/Images/ProjectImages/edit1.png)
 
 ![Editing Articles](./src/Images/ProjectImages/edit2.png)
 
+Saved Articles
 ![Saved Articles](./src/Images/ProjectImages/savedArticles.png)
 
+Editing Saved Articles
 ![Saved Articles Edit](./src/Images/ProjectImages/savedArticles2.png)
