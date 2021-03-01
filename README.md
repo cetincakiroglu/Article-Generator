@@ -17,7 +17,7 @@
 - Google Custom Search API
 - Heroku
 
-### Task List
+### Task List (Sprint 1)
 
 ### Stage I // Design UI
 - [x] Design project components in Figma.
