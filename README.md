@@ -2,7 +2,7 @@
 
 - Article Generator is a content maker, aims to bring relevant paragraphs by keyword input from the user.
 - User can add, remove, edit, save, update or delete articles.
-- This project is a result of 2 weeks of sprint period. Updates and improvements will be applied in future sprints.
+- This project is a result of 2 weeks of sprint period. Updates, improvements and refactoring will be applied in future sprints.
 
 ### Team Members
 - Çetin Çakıroğlu / UX-frontend-backend / [linkedIn](https://www.linkedin.com/in/cakiroglu-cetin/) [Github](https://github.com/cetincakiroglu)
@@ -67,18 +67,19 @@
 - [x] Improve styling, make it more responsive.
 - [x] Check cross-browser compatibility
 - [ ] Deploy.
+
 ---
 
 ### Project Images
 
-![Landing Page] (./src/Images/ProjectImages/initial-landing.png)
+![Landing Page](./src/Images/ProjectImages/initial-landing.png)
 
-![Search Results] (./src/Images/ProjectImages/searchResults.png)
+![Search Results](./src/Images/ProjectImages/searchResults.png)
 
-![Editing Articles] (./src/Images/ProjectImages/edit1.png)
+![Editing Articles](./src/Images/ProjectImages/edit1.png)
 
-![Editing Articles] (./src/Images/ProjectImages/edit2.png)
+![Editing Articles](./src/Images/ProjectImages/edit2.png)
 
-![Saved Articles] (./src/Images/ProjectImages/savedArticles.png)
+![Saved Articles](./src/Images/ProjectImages/savedArticles.png)
 
-![Saved Articles Edit] (./src/Images/ProjectImages/savedArticles2.png)
+![Saved Articles Edit](./src/Images/ProjectImages/savedArticles2.png)
