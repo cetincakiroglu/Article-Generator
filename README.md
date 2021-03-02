@@ -72,30 +72,30 @@
 
 ### Stage I // UX Improvement
 
-- [] Improved textarea, user should format the text whathever he/she wants.
-- [] Improved user feedback.
-- [] User should download text as plain text,pdf,docs,word formats.
-- [] If there is no articles saved, hide Saved Articles on initial loading. It should only appear when user saved an article.
-- [] Wrote the resources you scrape paragraphs from.
+- [ ] Improved textarea, user should format the text whathever he/she wants.
+- [ ] Improved user feedback.
+- [ ] User should download text as plain text,pdf,docs,word formats.
+- [ ] If there is no articles saved, hide Saved Articles on initial loading. It should only appear when user saved an article.
+- [ ] Wrote the resources you scrape paragraphs from.
 
 ### Stage II // Front End Improvement
 
-- [] Apply context api.
-- [] Improve modularity.
-- [] Search for material UI or Ant Design (optional).
-- [] Build a text area component, that should include text-decoration options, font-sizes, font-styles, photo upload etc...
-- [] Apply dark-light mode switch.
-- [] Do something with selected paragraphs. User should see which ones selected dynamically.
-- [] Apply categorization, maybe hashtags?
-- [] Make user profile / dashboard.
+- [ ] Apply context api.
+- [ ] Improve modularity.
+- [ ] Search for material UI or Ant Design (optional).
+- [ ] Build a text area component, that should include text-decoration options, font-sizes, font-styles, photo upload etc...
+- [ ] Apply dark-light mode switch.
+- [ ] Do something with selected paragraphs. User should see which ones selected dynamically.
+- [ ] Apply categorization, maybe hashtags?
+- [ ] Make user profile / dashboard.
 
 ### Stage III // Back End Improvement
 
-- [] Improve scraping algorithm. Remove unnecessary numbers and fix string character restrictions.
-- [] Make a filter about resources to search. Improve confidentiality.
-- [] Fix google search api restrictions. You can search max 100. Remove this limitation.
-- [] Use firebase for google signup. 
-- [] Store saved articles in database if user authenticated.
+- [ ] Improve scraping algorithm. Remove unnecessary numbers and fix string character restrictions.
+- [ ] Make a filter about resources to search. Improve confidentiality.
+- [ ] Fix google search api restrictions. You can search max 100. Remove this limitation.
+- [ ] Use firebase for google signup. 
+- [ ] Store saved articles in database if user authenticated.
 
 ---
 
