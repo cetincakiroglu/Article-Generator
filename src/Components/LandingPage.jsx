@@ -42,7 +42,6 @@ const getData = async function (str) {
       .then(result => setMatchedArticle(result))
       .then(()=>setShowSpinner(0))
     }
-    // https://protoback-adana.herokuapp.com/search?q=artificial+intelligence
     catch(err){
       console.log(err)
     };
