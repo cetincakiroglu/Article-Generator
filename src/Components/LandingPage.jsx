@@ -37,7 +37,7 @@ const getData = async function (str) {
     redirect: 'follow'
   };
   try{
-      fetch(`http://localhost:5000/search?q=${str}`, requestOptions)
+      fetch(`https://salty-meadow-59254.herokuapp.com/search?q=${str}`, requestOptions)
       .then(response => response.json())
       .then(result => setMatchedArticle(result))
       .then(()=>setShowSpinner(0))
