@@ -15,14 +15,12 @@ html {
   background-color: #242424 !important;
   color: #f6f6f6;
 }
-
+/* 
 ::-webkit-scrollbar {
   display: none !important;
   -ms-overflow-style: none;
-  /* IE and Edge */
   scrollbar-width: none;
-  /* Firefox */
-}
+} */
 
 h1,
 h2,
@@ -174,8 +172,8 @@ a {
 
 /*INPUT GROUPS*/
 #form {
-  margin: 20% auto !important;
-  height: 200px;
+  margin: 20% auto 5% auto !important;
+  height: 170px;
 }
 
 .form-edit {
@@ -274,6 +272,8 @@ a {
   border: 1px solid #81c55f !important;
 }
 
+/*Saved Articles*/
+
 /*CARDS*/
 #saved {
   font-weight: 500;
@@ -333,8 +333,6 @@ a {
 .goog-te-combo span {
   display: none;
 }
-
-/*Navbar*/
 
 
 /*About*/
@@ -406,6 +404,7 @@ a {
   border-radius: 50%;
   padding: 3px;
   transition: 0.2s ease-in-out;
+  z-index:101;
 }
 
 .scrollTop:hover {
@@ -430,7 +429,6 @@ a {
 /*footer*/
 #root {
   min-height: 100vh;
-
 }
 
 #footer,
@@ -473,7 +471,7 @@ h3 {
   color: #ffff;
   font-size: 16px;
 }
-
+/* Google Translate */
 #goog-gt-tt {
   display: none !important;
 }

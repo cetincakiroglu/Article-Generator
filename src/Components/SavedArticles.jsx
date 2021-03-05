@@ -77,7 +77,7 @@ useEffect(()=>{
         <Row className="my-5">
             <h2 className="green pl-3">Saved Articles</h2>
         </Row>
-        <Row className="d-flex mb-5 justify-content-between">
+        <Row id="saved-articles-container" className="d-flex mb-5 justify-content-between">
         
            {savedItems.map((item,index)=>(
             <>
@@ -123,7 +123,10 @@ useEffect(()=>{
         </Form>
         </Col>
         </Row>
-        <ScrollArrow className="align-self-end" />
+        <Row>
+
+        <ScrollArrow />
+        </Row>
         </>
     )
 }

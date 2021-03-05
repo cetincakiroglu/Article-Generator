@@ -48,7 +48,7 @@ const getData = async function (str) {
   }
     return (
       <>
-      <Row className="mb-5" >
+      <Row className="" >
         <Col>
           <Form id="form" onSubmit={handleSubmit} className="d-flex flex-column justify-content-around align-items-center">
             <Form.Group controlId="formBasicEmail" className="input-field">
@@ -63,11 +63,10 @@ const getData = async function (str) {
                Generate Article
             </button> 
           </Form>
-         
         <Spinner showSpinner ={showSpinner}/>
         </Col>
       </Row>
-      <Row className="d-flex flex-column mt-5">
+      <Row className="d-flex flex-column mt-3">
 
         <Articles
         formInput = {formInput}
