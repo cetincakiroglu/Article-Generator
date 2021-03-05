@@ -2,7 +2,6 @@ import React, { useState, useRef, useContext } from 'react'
 import {Link} from 'react-router-dom'
 import { Row, Col, Form } from 'react-bootstrap'
 import alertify from 'alertifyjs'
-import Spinner from './Spinner'
 
 
 function ArticleCard({values,setValues}) {
@@ -37,6 +36,8 @@ function ArticleCard({values,setValues}) {
             let storedItem = JSON.parse(localStorage.getItem('article'));
             newSavedArticles = [...newSavedArticles,...storedItem]
             localStorage.setItem('article', JSON.stringify(newSavedArticles));
+        }else{
+            localStorage.setItem('article', JSON.stringify(newSavedArticles));
         }
         
        alertify.success('Article Saved')
@@ -48,7 +49,7 @@ function ArticleCard({values,setValues}) {
     }
 
     const handleBtn = () =>{
-       if(JSON.parse(localStorage.getItem('article'))[0]){
+       if(localStorage.getItem('article')){
            setShowBtn(true)
        }else{
            setShowBtn(false)
