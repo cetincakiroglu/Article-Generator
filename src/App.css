@@ -192,8 +192,7 @@ a {
 
 .form-label,
 .form-edit,
-.form-group,
-.form-control {
+.form-group{
   background-color: transparent;
 }
 
