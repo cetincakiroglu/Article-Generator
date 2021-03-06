@@ -80,7 +80,7 @@ useEffect(()=>{
         </Row>
         <Row id="saved-articles-container" className="d-flex mb-5 justify-content-between">
         
-           {savedItems.map((item,index)=>(
+           {savedItems[0] ? savedItems.map((item,index)=>(
             <>
                 <Col className="article m-4 p-4 d-flex flex-column justify-content-between" md={5}>
                 <h2>#{index+1} </h2>
@@ -103,7 +103,7 @@ useEffect(()=>{
                     </div>
                 </Col>
             </> 
-            ))}
+            )) : (<p>It seems you have not saved any article yet, it's a beautiful day to write something.</p>)}
               {/* editing part starts */}        
         <Col className={`article col-md-12 d-${classToggler===true ? 'none' : 'block' }`}>
         <Form className={`form-edit`} onSubmit={handleSubmit}>
