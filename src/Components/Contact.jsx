@@ -67,7 +67,7 @@ function Contact() {
                             </Col>
                             <hr className="contact-line"/>
                             <Card.Text className="text-center contact-info">
-                            Frontend Developer, his main focus in the project is to create UX, establish frontend applications.
+                            Frontend Developer, his main focus in the project is to create UX, establish frontend & backend applications.
                             </Card.Text>
                             <Col className="d-flex justify-content-around mt-4">
                             <Card.Link className="link" href="https://www.linkedin.com/in/cakiroglu-cetin/" ><FaLinkedin  className="icons"/></Card.Link>

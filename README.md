@@ -4,6 +4,8 @@
 - User can add, remove, edit, save, update or delete articles.
 - **This project is a result of 2 weeks of sprint period. Updates, improvements and refactoring will be applied in future sprints.**
 
+[DEMO](https://article-generator.netlify.app)
+
 ### Team Members
 - Çetin Çakıroğlu / UX-frontend-backend / [linkedIn](https://www.linkedin.com/in/cakiroglu-cetin/) [Github](https://github.com/cetincakiroglu)
 - Saliha Şahin / UI-frontend /[linkedIn](https://www.linkedin.com/in/saliha-%C5%9Fahin-45651a19a/) [Github](https://github.com/SalihaSahin)
