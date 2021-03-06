@@ -68,8 +68,9 @@
 - [x] Refactor components, improve code quality.
 - [x] Improve styling, make it more responsive.
 - [x] Check cross-browser compatibility
-- [ ] Deploy. (link will be added soon...)
+- [x] Deploy. 
 ---
+
 ### Task List (2nd Sprint - Coming soon...)
 
 ### Stage I // UX Improvement
