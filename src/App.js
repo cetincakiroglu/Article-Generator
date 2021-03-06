@@ -24,10 +24,10 @@ function App() {
         <NavBar
           links={links}
         />
-        <Container id="main">
+        
           {routeMaps}
+     
         <Footer />
-        </Container>
       </BrowserRouter>
     </>
   );

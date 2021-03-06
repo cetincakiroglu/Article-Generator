@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
+
 /*UNIVERSAL SETTINGS*/
 html {
   scroll-behavior: smooth;
 }
-
+body{
+  height:100vh;
+}
 .row,
 .container,
 .nav,
@@ -15,12 +18,12 @@ html {
   background-color: #242424 !important;
   color: #f6f6f6;
 }
-/* 
+
 ::-webkit-scrollbar {
   display: none !important;
   -ms-overflow-style: none;
   scrollbar-width: none;
-} */
+}
 
 h1,
 h2,
@@ -43,7 +46,7 @@ button,
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 300;
-  word-break: break-word;
+  /* word-break: break-word; */
 }
 
 p {
@@ -88,30 +91,11 @@ span {
   border-bottom: 0.5px solid #f6f6f621;
 }
 
-#footer {
-  border-top: 0.5px solid #f6f6f621;
-  clear: both;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
-}
-
 #footer,
 #footer>p,
 a,
 span {
   z-index: 3;
-}
-
-.container {
-  margin-bottom: 100px;
-}
-
-#root {
-  position: relative;
 }
 
 #logo {
@@ -170,10 +154,35 @@ a {
   border: 2px solid #81c55f;
 }
 
+/*CONTAINER SETTINGS*/
+#footer {
+  border-top: 0.5px solid #f6f6f621;
+  clear: both;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+#main{
+  max-width:auto !important;
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  align-self:center;
+  width: 100%;
+}
+#root{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 /*INPUT GROUPS*/
-#form {
-  margin: 20% auto 5% auto !important;
-  height: 170px;
+
+#search-input{
+  width:400px;
 }
 
 .form-edit {
@@ -195,7 +204,7 @@ a {
 
 .input-field {
   height: 400px !important;
-  width: 500px;
+  min-width: 500px;
   line-height: 2rem;
 }
 
@@ -271,8 +280,6 @@ a {
   color: #81c55f !important;
   border: 1px solid #81c55f !important;
 }
-
-/*Saved Articles*/
 
 /*CARDS*/
 #saved {
@@ -357,14 +364,9 @@ a {
   background: 1px solid #242424;
 }
 
-#contact {
-  margin: 7% auto;
-}
-
 .user {
   text-align: center;
 }
-
 
 .info-card {
   background-color: #e6e6e6 !important;
@@ -427,9 +429,7 @@ a {
 }
 
 /*footer*/
-#root {
-  min-height: 100vh;
-}
+
 
 #footer,
 #footer p,
@@ -460,7 +460,6 @@ a {
 h3 {
   font-weight: bold;
   color: #67A04B;
-
 }
 
 .our-information {
@@ -484,17 +483,13 @@ h3 {
   text-decoration: none !important;
 }
 
-body {
-  top: 0 !important;
-}
-
 #google_translate_element2 {
   display: none !important;
 }
 
 #lang {
   position: absolute;
-  right: 0;
+  right: 2%;
 }
 
 /*SPINNER*/

@@ -1,5 +1,5 @@
 import React,{useState, useRef, useEffect} from 'react'
-import {Row, Col, Form} from 'react-bootstrap';
+import {Container, Row, Col, Form} from 'react-bootstrap';
 import Articles from './Articles'
 import ScrollArrow from './ScrollArrow'
 import Spinner from './Spinner'
@@ -48,10 +48,11 @@ const getData = async function (str) {
   }
     return (
       <>
-      <Row className="" >
+      <Container id="landing-page-wrapper">
+      <Row>
         <Col>
-          <Form id="form" onSubmit={handleSubmit} className="d-flex flex-column justify-content-around align-items-center">
-            <Form.Group controlId="formBasicEmail" className="input-field">
+          <Form onSubmit={handleSubmit} className="d-flex flex-column justify-content-around align-items-center mt-5 mb-5">
+            <Form.Group controlId="formBasicEmail" id="search-input">
               <Form.Label>What do you want to write about ?</Form.Label>
               <Form.Control
                type="text"
@@ -63,10 +64,10 @@ const getData = async function (str) {
                Generate Article
             </button> 
           </Form>
-        <Spinner showSpinner ={showSpinner}/>
         </Col>
       </Row>
       <Row className="d-flex flex-column mt-3">
+        <Spinner showSpinner ={showSpinner}/>
 
         <Articles
         formInput = {formInput}
@@ -78,6 +79,7 @@ const getData = async function (str) {
         />
       <ScrollArrow />
       </Row>
+      </Container>
       </>
     )
 }

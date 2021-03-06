@@ -1,9 +1,12 @@
 import React from 'react'
-import {Row,Col} from 'react-bootstrap'
+import {Container,Row,Col} from 'react-bootstrap'
 
 function About() {
     return (
         <>
+        <Container>
+
+
         <Row className="my-5">
             <h2 className="green pl-3">About Us</h2>
         </Row>
@@ -28,6 +31,7 @@ function About() {
             </div>
             </Col>
         </Row>
+        </Container>
 
         </>
     )

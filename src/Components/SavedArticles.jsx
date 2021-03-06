@@ -1,5 +1,5 @@
 import React,{useState,useEffect,useRef} from 'react'
-import {Row,Col,Card, Form} from 'react-bootstrap'
+import {Container, Row,Col,Card, Form} from 'react-bootstrap'
 import alertify from 'alertifyjs'
 import {BiEdit, BiTrash} from 'react-icons/bi'
 import {FaGithub} from 'react-icons/fa'
@@ -74,6 +74,7 @@ useEffect(()=>{
 },[])
     return (
         <>
+        <Container className="">
         <Row className="my-5">
             <h2 className="green pl-3">Saved Articles</h2>
         </Row>
@@ -127,6 +128,7 @@ useEffect(()=>{
 
         <ScrollArrow />
         </Row>
+        </Container>
         </>
     )
 }
